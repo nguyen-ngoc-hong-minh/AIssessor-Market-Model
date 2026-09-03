@@ -181,9 +181,11 @@ function MetricCard({
           <strong>{label}</strong>
           <h3>{title}</h3>
         </div>
-        <span className="ref-badge">{badge}</span>
+        <div className="ref-metric-actions">
+          <span className="ref-badge">{badge}</span>
+          <Explain>{explain}</Explain>
+        </div>
       </div>
-      <Explain>{explain}</Explain>
       <div className="ref-metric-value">
         {value}<small>{suffix}</small>
       </div>
