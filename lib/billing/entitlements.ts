@@ -1,0 +1,2 @@
+export type Plan="free"|"plus"|"team"|"enterprise";
+export function subscriptionEntitlements(subscription:{plan:Plan;status:string}|null){const active=Boolean(subscription&&["active","trialing"].includes(subscription.status));const plan:Plan=active&&subscription?subscription.plan:"free";return{plan,canViewFullResults:active&&["plus","team","enterprise"].includes(plan),canSave:active&&["plus","team","enterprise"].includes(plan),canUseTeam:active&&["team","enterprise"].includes(plan)}}
