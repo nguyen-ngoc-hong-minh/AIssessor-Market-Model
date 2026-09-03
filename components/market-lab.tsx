@@ -47,10 +47,10 @@ type FinancialTab = "growth" | "competitors" | "regions" | "economics";
 
 const FX_VND = 25_000;
 
-const cases: Record<CaseId, { label: string; year1: number; year3: number; year5: number; arpu: number; churn: number; margin: number; cac: number; color: string }> = {
-  ultraConservative: { label: "Ultra-conservative", year1: 0.05, year3: 0.2, year5: 0.5, arpu: 60, churn: 6, margin: 80, cac: 24, color: "#4F46E5" },
-  base: { label: "Base Case", year1: 0.1, year3: 0.5, year5: 1, arpu: 84, churn: 4.5, margin: 85, cac: 18, color: "#0213B0" },
-  aggressive: { label: "Aggressive", year1: 0.15, year3: 0.75, year5: 1.5, arpu: 108, churn: 3.5, margin: 88, cac: 15, color: "#00A88F" },
+const cases: Record<CaseId, { label: string; year1: number; year3: number; year5: number; arpu: number; churn: number; margin: number; cac: number }> = {
+  ultraConservative: { label: "Ultra-conservative", year1: 0.05, year3: 0.2, year5: 0.5, arpu: 60, churn: 6, margin: 80, cac: 24 },
+  base: { label: "Base Case", year1: 0.1, year3: 0.5, year5: 1, arpu: 84, churn: 4.5, margin: 85, cac: 18 },
+  aggressive: { label: "Aggressive", year1: 0.15, year3: 0.75, year5: 1.5, arpu: 108, churn: 3.5, margin: 88, cac: 15 },
 };
 
 const slides: { id: SlideId; label: string }[] = [
@@ -1706,11 +1706,11 @@ function CompetitorMatrix() {
 
 function RegionalPlan({ selectedSom, currency }: { selectedSom: number; currency: Currency }) {
   const regions = [
-    { name: "Southeast Asia", share: 40, color: "#0213B0", note: "Vietnam-first beachhead" },
-    { name: "North America", share: 25, color: "#3559FF", note: "High SaaS willingness-to-pay" },
-    { name: "Europe", share: 15, color: "#4F46E5", note: "Governance-led teams" },
-    { name: "East Asia", share: 15, color: "#00A88F", note: "Dense AI-tool adoption" },
-    { name: "Rest of world", share: 5, color: "#D97706", note: "Partner-led expansion" },
+    { name: "Southeast Asia", share: 40, note: "Vietnam-first beachhead" },
+    { name: "North America", share: 25, note: "High SaaS willingness-to-pay" },
+    { name: "Europe", share: 15, note: "Governance-led teams" },
+    { name: "East Asia", share: 15, note: "Dense AI-tool adoption" },
+    { name: "Rest of world", share: 5, note: "Partner-led expansion" },
   ];
 
   return (
@@ -1733,7 +1733,7 @@ function RegionalPlan({ selectedSom, currency }: { selectedSom: number; currency
         <div className="ref-region-list">
           {regions.map((region) => (
             <div key={region.name}>
-              <i style={{ background: region.color }} />
+              <i />
               <span>
                 <strong>{region.name}</strong>
                 <small>{region.note}</small>

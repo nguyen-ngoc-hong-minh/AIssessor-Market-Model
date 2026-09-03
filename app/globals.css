@@ -11900,3 +11900,474 @@ section.trial-results,
     padding: 40px 16px 60px;
   }
 }
+
+/* ==========================================================================
+   MARKET DECK — AISSESSOR MAIN PRODUCT DESIGN SYSTEM PARITY
+   Source of truth: #0213B0 / #FFFFF1 / #F4F7F5, 1.5px outlines,
+   0.25rem structural radius, no decorative shadows or gradients.
+   ========================================================================== */
+
+.reference-deck {
+  --ref-bg: #FFFFF1;
+  --ref-surface: #FFFFF1;
+  --ref-surface-soft: #F4F7F5;
+  --ref-ink: #0213B0;
+  --ref-muted: #0213B0;
+  --ref-soft: rgba(2, 19, 176, 0.68);
+  --ref-line: #0213B0;
+  --ref-line-strong: #0213B0;
+  --ref-blue: #0213B0;
+  --ref-blue-soft: #F4F7F5;
+  --ref-indigo: #0213B0;
+  --ref-indigo-soft: #F4F7F5;
+  --ref-mint: #0213B0;
+  --ref-mint-soft: #F4F7F5;
+  --ref-amber: #0213B0;
+  --ref-amber-soft: #F4F7F5;
+  --ref-shadow: none;
+  --ref-series-1: #0213B0;
+  --ref-series-2: rgba(2, 19, 176, 0.82);
+  --ref-series-3: rgba(2, 19, 176, 0.64);
+  --ref-series-4: rgba(2, 19, 176, 0.46);
+  --ref-series-5: rgba(2, 19, 176, 0.28);
+  background: #FFFFF1 !important;
+  color: #0213B0 !important;
+  font-family: var(--font-body), sans-serif !important;
+}
+
+:root[data-theme="dark"] .reference-deck,
+.reference-deck.theme-dark {
+  --ref-bg: #0213B0;
+  --ref-surface: #0213B0;
+  --ref-surface-soft: #3559FF;
+  --ref-ink: #FFFFF1;
+  --ref-muted: #FFFFF1;
+  --ref-soft: rgba(255, 255, 241, 0.72);
+  --ref-line: #FFFFF1;
+  --ref-line-strong: #FFFFF1;
+  --ref-blue: #FFFFF1;
+  --ref-blue-soft: #3559FF;
+  --ref-indigo: #FFFFF1;
+  --ref-indigo-soft: #3559FF;
+  --ref-mint: #FFFFF1;
+  --ref-mint-soft: #3559FF;
+  --ref-amber: #FFFFF1;
+  --ref-amber-soft: #3559FF;
+  --ref-shadow: none;
+  --ref-series-1: #FFFFF1;
+  --ref-series-2: rgba(255, 255, 241, 0.82);
+  --ref-series-3: rgba(255, 255, 241, 0.64);
+  --ref-series-4: rgba(255, 255, 241, 0.46);
+  --ref-series-5: rgba(255, 255, 241, 0.28);
+  background: #0213B0 !important;
+  color: #FFFFF1 !important;
+}
+
+.reference-deck *,
+.reference-deck *::before,
+.reference-deck *::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transition: none !important;
+}
+
+.reference-deck :is(div, section, article, nav, header, footer, aside, dialog, button, fieldset, details) {
+  border-radius: 0.25rem !important;
+}
+
+.reference-deck :is(h1, h2, h3, h4, p, span, small, strong, b, em, label, summary, li, a) {
+  color: var(--ref-ink);
+}
+
+.reference-deck :is(h1, h2, h3, h4, button, summary, strong, b) {
+  font-family: var(--font-sans), sans-serif;
+}
+
+.reference-deck :is(.ref-kicker, .ref-slide-number, .ref-mini-label, .ref-control-label, .ref-tier-label, .ref-research-date, .ref-assumption-pill, .ref-data-tag, .ref-badge) {
+  font-family: var(--font-mono), monospace !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+}
+
+.reference-deck :is(.ref-header, .ref-footer) {
+  background: var(--ref-surface) !important;
+  border-color: var(--ref-line) !important;
+  backdrop-filter: none !important;
+}
+
+.reference-deck :is(
+  .ref-panel,
+  .ref-white-card,
+  .ref-metric-card,
+  .ref-slider-card,
+  .ref-visual-card,
+  .ref-tier-card,
+  .ref-addon-simulator,
+  .ref-freemium-economics,
+  .ref-financial-panel,
+  .ref-competitor-matrix,
+  .ref-market-matrix,
+  .ref-market-table-wrap,
+  .ref-hcmc-panel,
+  .ref-moat-panel,
+  .ref-workflow-preview,
+  .ref-execution-roadmap,
+  .ref-target-card,
+  .ref-savings-card,
+  .ref-cost-diagnostic,
+  .ref-pitch-modal
+) {
+  background: var(--ref-surface) !important;
+  border: 1.5px solid var(--ref-line) !important;
+}
+
+.reference-deck :is(
+  .ref-slide-nav,
+  .ref-controls,
+  .ref-subtabs,
+  .ref-financial-tabs,
+  .ref-market-filterbar,
+  .ref-chart-legend,
+  .ref-market-table-head,
+  .ref-matrix-head,
+  .ref-goal-card,
+  .ref-pricing-status,
+  .ref-assumption-pill,
+  .ref-research-date,
+  .ref-search-box,
+  .ref-inline-input,
+  .ref-unit-stats > div,
+  .ref-econ-stats > div,
+  .ref-team-cost-grid > article,
+  .ref-diagnostic-grid > article,
+  .ref-region-list > div
+) {
+  background: var(--ref-surface-soft) !important;
+  border-color: var(--ref-line) !important;
+}
+
+.reference-deck :is(.ref-slide-nav, .ref-controls, .ref-subtabs, .ref-financial-tabs, .ref-market-filterbar) {
+  border: 1.5px solid var(--ref-line) !important;
+  padding: 4px !important;
+  gap: 4px !important;
+}
+
+.reference-deck :is(.ref-brand-mark, .ref-market-icon, .ref-mini-icon, .ref-modal-icon) {
+  background: #0213B0 !important;
+  border: 0 !important;
+  color: #FFFFF1 !important;
+}
+
+.reference-deck :is(.ref-brand-mark, .ref-market-icon, .ref-mini-icon, .ref-modal-icon) * {
+  color: #FFFFF1 !important;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+:root[data-theme="dark"] .reference-deck :is(.ref-brand-mark, .ref-market-icon, .ref-mini-icon, .ref-modal-icon),
+.reference-deck.theme-dark :is(.ref-brand-mark, .ref-market-icon, .ref-mini-icon, .ref-modal-icon) {
+  background: #FFFFF1 !important;
+  color: #0213B0 !important;
+}
+
+:root[data-theme="dark"] .reference-deck :is(.ref-brand-mark, .ref-market-icon, .ref-mini-icon, .ref-modal-icon) *,
+.reference-deck.theme-dark :is(.ref-brand-mark, .ref-market-icon, .ref-mini-icon, .ref-modal-icon) * {
+  color: #0213B0 !important;
+}
+
+.reference-deck :is(.ref-hero-card, .ref-revenue-architecture, .ref-market-head, .ref-strategy-panel-head) {
+  background: #0213B0 !important;
+  border: 1.5px solid #0213B0 !important;
+  color: #FFFFF1 !important;
+}
+
+.reference-deck :is(.ref-hero-card, .ref-revenue-architecture, .ref-market-head, .ref-strategy-panel-head) * {
+  color: #FFFFF1 !important;
+  border-color: rgba(255, 255, 241, 0.72) !important;
+}
+
+:root[data-theme="dark"] .reference-deck :is(.ref-hero-card, .ref-revenue-architecture, .ref-market-head, .ref-strategy-panel-head),
+.reference-deck.theme-dark :is(.ref-hero-card, .ref-revenue-architecture, .ref-market-head, .ref-strategy-panel-head) {
+  background: #3559FF !important;
+  border-color: #FFFFF1 !important;
+}
+
+.reference-deck :is(
+  .ref-primary-button,
+  .ref-slide-nav button.is-active,
+  .ref-segment button.is-active,
+  .ref-subtabs button.is-active,
+  .ref-financial-tabs button.is-active,
+  .ref-filter-group button.is-active,
+  .ref-mini-currency button.is-active
+) {
+  background: #0213B0 !important;
+  border-color: #0213B0 !important;
+  color: #FFFFF1 !important;
+}
+
+.reference-deck :is(
+  .ref-primary-button,
+  .ref-slide-nav button.is-active,
+  .ref-segment button.is-active,
+  .ref-subtabs button.is-active,
+  .ref-financial-tabs button.is-active,
+  .ref-filter-group button.is-active,
+  .ref-mini-currency button.is-active
+) * {
+  color: #FFFFF1 !important;
+  stroke: currentColor !important;
+}
+
+:root[data-theme="dark"] .reference-deck :is(
+  .ref-primary-button,
+  .ref-slide-nav button.is-active,
+  .ref-segment button.is-active,
+  .ref-subtabs button.is-active,
+  .ref-financial-tabs button.is-active,
+  .ref-filter-group button.is-active,
+  .ref-mini-currency button.is-active
+),
+.reference-deck.theme-dark :is(
+  .ref-primary-button,
+  .ref-slide-nav button.is-active,
+  .ref-segment button.is-active,
+  .ref-subtabs button.is-active,
+  .ref-financial-tabs button.is-active,
+  .ref-filter-group button.is-active,
+  .ref-mini-currency button.is-active
+) {
+  background: #FFFFF1 !important;
+  border-color: #FFFFF1 !important;
+  color: #0213B0 !important;
+}
+
+:root[data-theme="dark"] .reference-deck :is(
+  .ref-primary-button,
+  .ref-slide-nav button.is-active,
+  .ref-segment button.is-active,
+  .ref-subtabs button.is-active,
+  .ref-financial-tabs button.is-active,
+  .ref-filter-group button.is-active,
+  .ref-mini-currency button.is-active
+) *,
+.reference-deck.theme-dark :is(
+  .ref-primary-button,
+  .ref-slide-nav button.is-active,
+  .ref-segment button.is-active,
+  .ref-subtabs button.is-active,
+  .ref-financial-tabs button.is-active,
+  .ref-filter-group button.is-active,
+  .ref-mini-currency button.is-active
+) * {
+  color: #0213B0 !important;
+}
+
+.reference-deck :is(.ref-secondary-button, .ref-outline-button, .ref-icon-button, .ref-modal-close) {
+  background: transparent !important;
+  border: 1.5px solid #0213B0 !important;
+  color: #0213B0 !important;
+}
+
+.reference-deck :is(.ref-secondary-button, .ref-outline-button, .ref-icon-button, .ref-modal-close) * {
+  color: currentColor !important;
+  stroke: currentColor !important;
+}
+
+:root[data-theme="dark"] .reference-deck :is(.ref-secondary-button, .ref-outline-button, .ref-icon-button, .ref-modal-close),
+.reference-deck.theme-dark :is(.ref-secondary-button, .ref-outline-button, .ref-icon-button, .ref-modal-close) {
+  border-color: #FFFFF1 !important;
+  color: #FFFFF1 !important;
+}
+
+.reference-deck :is(.ref-slide-nav button, .ref-segment button, .ref-subtabs button, .ref-financial-tabs button, .ref-filter-group button, .ref-mini-currency button) {
+  border: 0 !important;
+  border-radius: 0.25rem !important;
+}
+
+.reference-deck :is(.ref-slide-nav button, .ref-segment button, .ref-subtabs button, .ref-financial-tabs button, .ref-filter-group button, .ref-mini-currency button):not(.is-active) {
+  background: transparent !important;
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck :is(.ref-slide-nav button, .ref-segment button, .ref-subtabs button, .ref-financial-tabs button, .ref-filter-group button, .ref-mini-currency button):not(.is-active) * {
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck :is(button, a, summary):focus-visible,
+.reference-deck input:focus-visible {
+  outline: 2px solid var(--ref-ink) !important;
+  outline-offset: 2px !important;
+}
+
+.reference-deck input:not([type="range"]),
+.reference-deck textarea,
+.reference-deck select,
+.reference-deck .ref-search-box input,
+.reference-deck .ref-inline-input input {
+  background: #F4F7F5 !important;
+  border: 0 !important;
+  border-bottom: 1.5px solid #0213B0 !important;
+  border-radius: 0 !important;
+  color: #0213B0 !important;
+}
+
+:root[data-theme="dark"] .reference-deck input:not([type="range"]),
+:root[data-theme="dark"] .reference-deck textarea,
+:root[data-theme="dark"] .reference-deck select,
+:root[data-theme="dark"] .reference-deck .ref-search-box input,
+:root[data-theme="dark"] .reference-deck .ref-inline-input input,
+.reference-deck.theme-dark input:not([type="range"]),
+.reference-deck.theme-dark textarea,
+.reference-deck.theme-dark select,
+.reference-deck.theme-dark .ref-search-box input,
+.reference-deck.theme-dark .ref-inline-input input {
+  background: #3559FF !important;
+  border-bottom-color: #FFFFF1 !important;
+  color: #FFFFF1 !important;
+}
+
+.reference-deck input[type="range"] {
+  accent-color: #0213B0 !important;
+  background: #F4F7F5 !important;
+  border: 1.5px solid #0213B0 !important;
+  border-radius: 0 !important;
+  height: 8px !important;
+}
+
+:root[data-theme="dark"] .reference-deck input[type="range"],
+.reference-deck.theme-dark input[type="range"] {
+  accent-color: #FFFFF1 !important;
+  background: #3559FF !important;
+  border-color: #FFFFF1 !important;
+}
+
+.reference-deck input[type="range"]::-webkit-slider-thumb {
+  background: #0213B0 !important;
+  border: 1.5px solid #FFFFF1 !important;
+  box-shadow: none !important;
+}
+
+:root[data-theme="dark"] .reference-deck input[type="range"]::-webkit-slider-thumb,
+.reference-deck.theme-dark input[type="range"]::-webkit-slider-thumb {
+  background: #FFFFF1 !important;
+  border-color: #0213B0 !important;
+}
+
+.reference-deck :is(.ref-live-pill, .ref-badge, .ref-chip, .ref-data-tag, .ref-category-tag, .ref-tier-ribbon, .ref-pricing-status) {
+  background: var(--ref-surface-soft) !important;
+  border: 1.5px solid var(--ref-line) !important;
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck :is(.ref-metric-card, .ref-slider-card, .ref-diagnostic-grid > article, .ref-target-card, .ref-tier-card) {
+  border-color: var(--ref-line) !important;
+}
+
+.reference-deck :is(.ref-metric-icon, .ref-score, .ref-matrix-mark) {
+  background: var(--ref-surface-soft) !important;
+  border: 1.5px solid var(--ref-line) !important;
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck :is(.ref-metric-value, .ref-card-heading > span, .ref-goal-card b, .ref-score, .ref-diagnostic-grid b, .ref-target-card b, .ref-econ-stats b, .ref-unit-stats b) {
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck :is(.ref-explain, .ref-explain summary) {
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck .ref-explain summary {
+  border: 1.5px solid var(--ref-line) !important;
+  background: transparent !important;
+}
+
+.reference-deck .ref-explain p {
+  background: var(--ref-surface) !important;
+  border: 1.5px solid var(--ref-line) !important;
+  color: var(--ref-ink) !important;
+}
+
+.reference-deck :is(.ref-market-row.is-aissessor, .ref-matrix-row.is-aissessor, .ref-tier-card.is-featured, .ref-target-card.is-selected) {
+  background: var(--ref-surface-soft) !important;
+  border-color: var(--ref-line) !important;
+}
+
+.reference-deck .arr-area {
+  fill: var(--ref-series-5) !important;
+}
+
+.reference-deck .arr-line {
+  stroke: var(--ref-series-1) !important;
+}
+
+.reference-deck .profit-line {
+  stroke: var(--ref-series-2) !important;
+  stroke-dasharray: 7 4 !important;
+}
+
+.reference-deck .cost-line {
+  stroke: var(--ref-series-4) !important;
+  stroke-dasharray: 2 4 !important;
+}
+
+.reference-deck .arr-dot {
+  fill: var(--ref-series-1) !important;
+  stroke: var(--ref-surface) !important;
+}
+
+.reference-deck .ref-line-chart :is(line, text) {
+  stroke: var(--ref-series-5) !important;
+}
+
+.reference-deck .ref-line-chart text {
+  fill: var(--ref-soft) !important;
+  stroke: none !important;
+}
+
+.reference-deck .ref-chart-legend .is-arr i { background: var(--ref-series-1) !important; }
+.reference-deck .ref-chart-legend .is-profit i { background: var(--ref-series-2) !important; }
+.reference-deck .ref-chart-legend .is-cost i { background: var(--ref-series-4) !important; }
+
+.reference-deck .ref-region-donut {
+  border-radius: 50% !important;
+  background: conic-gradient(
+    var(--ref-series-1) 0% 40%,
+    var(--ref-series-2) 40% 65%,
+    var(--ref-series-3) 65% 80%,
+    var(--ref-series-4) 80% 95%,
+    var(--ref-series-5) 95% 100%
+  ) !important;
+}
+
+.reference-deck .ref-region-donut::before {
+  border-radius: 50% !important;
+  background: var(--ref-surface) !important;
+}
+
+.reference-deck :is(.ref-kicker-dot, .ref-progress span, .ref-region-list i) {
+  border-radius: 50% !important;
+}
+
+.reference-deck .ref-region-list > div:nth-child(1) i { background: var(--ref-series-1) !important; }
+.reference-deck .ref-region-list > div:nth-child(2) i { background: var(--ref-series-2) !important; }
+.reference-deck .ref-region-list > div:nth-child(3) i { background: var(--ref-series-3) !important; }
+.reference-deck .ref-region-list > div:nth-child(4) i { background: var(--ref-series-4) !important; }
+.reference-deck .ref-region-list > div:nth-child(5) i { background: var(--ref-series-5) !important; }
+
+.reference-deck .ref-modal-backdrop {
+  background: rgba(2, 19, 176, 0.42) !important;
+  backdrop-filter: none !important;
+}
+
+:root[data-theme="dark"] .reference-deck .ref-modal-backdrop,
+.reference-deck.theme-dark .ref-modal-backdrop {
+  background: rgba(0, 0, 0, 0.48) !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reference-deck .ref-slide {
+    animation: none !important;
+  }
+}
